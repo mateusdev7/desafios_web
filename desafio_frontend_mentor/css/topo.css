@@ -1,0 +1,40 @@
+:root {
+  --titulo1: hsl(234, 12%, 34%);
+  --titulo2: hsl(229, 6%, 66%);
+  --fundo: hsl(0, 0%, 98%);
+}
+
+.header {
+  display: grid;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.header-titulo1 {
+  font-weight: 200;
+  color: var(--titulo1);
+  text-align: center;
+}
+
+.header-titulo2 {
+  font-weight: 600;
+  color: var(--titulo1);
+  text-align: center;
+}
+
+.header-texto1 {
+  font-weight: 400;
+  color: var(--titulo2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+  .header-titulo1, .header-titulo2 {
+      font-size: 1.5rem;
+  }
+  .header-texto1 {
+      font-size: 0.7rem;
+      max-width: 45ch;
+  }
+}

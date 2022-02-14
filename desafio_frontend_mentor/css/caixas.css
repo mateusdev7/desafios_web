@@ -1,0 +1,234 @@
+:root {
+  --vermelho: hsl(0, 78%, 62%);
+  --ciano: hsl(180, 62%, 55%);
+  --laranja: hsl(34, 97%, 64%);
+  --azul: hsl(212, 86%, 64%);
+  --titulo1: hsl(234, 12%, 34%);
+  --titulo2: hsl(229, 6%, 66%);
+}
+
+.container-caixas {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 60px;
+  justify-content: center;
+}
+
+/* Ciano Css */
+
+.container-ciano {
+  display: grid;
+  align-self: center;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 300px;
+  padding: 30px;
+  width: 320px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px rgba(156, 180, 214, 0.5);
+  border-radius: 6px;
+  position: relative;
+  border-top: 3px solid var(--ciano);
+}
+
+.container-ciano::after {
+  content: url("/img/icon-supervisor.svg");
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 160px;
+  left: 280px;
+}
+
+.ciano-titulo {
+  color: var(--titulo1);
+  grid-column: 1 / -1;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+}
+
+.ciano-texto {
+  color: var(--titulo2);
+  font-weight: 400;
+  grid-column: 1 / -1;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* Container meio -  Css */
+
+.container-meio {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+/* Vermelho css */
+
+.container-vermelho {
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 300px;
+  padding: 30px;
+  width: 320px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px rgba(156, 180, 214, 0.5);
+  border-radius: 6px;
+  position: relative;
+  border-top: 3px solid var(--vermelho);
+}
+
+.container-vermelho::after {
+  content: url("/img/icon-team-builder.svg");
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 160px;
+  left: 280px;
+}
+
+.vermelho-titulo {
+  color: var(--titulo1);
+  grid-column: 1 / -1;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+}
+
+.vermelho-texto {
+  color: var(--titulo2);
+  font-weight: 400;
+  grid-column: 1 / -1;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* Laranja CSS */
+
+.container-laranja {
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 300px;
+  padding: 30px;
+  width: 320px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px rgba(156, 180, 214, 0.5);
+  border-radius: 6px;
+  position: relative;
+  border-top: 3px solid var(--laranja);
+  margin-top: 20px;
+}
+
+.container-laranja::after {
+  content: url("/img/icon-karma.svg");
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 160px;
+  left: 280px;
+}
+
+.laranja-titulo {
+  color: var(--titulo1);
+  grid-column: 1 / -1;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+}
+
+.laranja-texto {
+  color: var(--titulo2);
+  font-weight: 400;
+  grid-column: 1 / -1;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* Azul CSS */
+
+.container-azul {
+  display: grid;
+  align-items: center;
+  grid-template-rows: 50px 50px;
+  grid-template-columns: 300px;
+  padding: 30px;
+  width: 320px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 15px 15px rgba(156, 180, 214, 0.5);
+  border-radius: 6px;
+  position: relative;
+  border-top: 3px solid var(--azul);
+  margin-left: 20px;
+  align-self: center;
+}
+
+.container-azul::after {
+  content: url("/img/icon-calculator.svg");
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 160px;
+  left: 280px;
+}
+
+.azul-titulo {
+  color: var(--titulo1);
+  grid-column: 1 / -1;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+}
+
+.azul-texto {
+  color: var(--titulo2);
+  font-weight: 400;
+  grid-column: 1 / -1;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 902px) {
+  .container-caixas {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+  }
+  .container-meio {
+    display: grid;
+    gap: 40px;
+  }
+  .container-meio,
+  .container-azul {
+    margin-left: 0px;
+  }
+  .container-laranja {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-ciano,
+  .container-vermelho,
+  .container-laranja,
+  .container-azul {
+    grid-template-columns: 250px;
+    width: 290px;
+  }
+  .container-ciano::after {
+    left: 260px;
+  }
+  .container-vermelho::after {
+    left: 260px;
+  }
+  .container-laranja::after {
+    left: 260px;
+  }
+  .container-azul::after {
+    left: 260px;
+  }
+}
